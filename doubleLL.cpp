@@ -132,7 +132,22 @@ void traverse (){
 }
 
 void revtraverse (){
-    
+    if (listempty()){
+        cout << "\nList Kosong " << endl;
+    }
+    else{
+        cout << "\nRecords in descending order of roll number are :" <<endl;
+        node *current = START;
+        while (current->next != NULL)
+        {
+            current = current->next;
+        }
+        while (current != NULL)
+        {
+            cout << current->noMhs << " " << current->name << endl;
+            current = current->prev;
+        }    
+    }
 }
 
 
