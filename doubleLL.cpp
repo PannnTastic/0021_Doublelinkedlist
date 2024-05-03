@@ -54,6 +54,6 @@ void addnode(){
     }
 }
 
-bool search (){
-    
+bool search (int rollno, node **previous, node **current){
+
 }
