@@ -170,6 +170,45 @@ void searchdata(){
 }
 
 int main (){
+    while (true)
+    {
+        try
+        {
+            cout << "\nPilihan\n";
+            cout << "1. Tambahkan Data\n";
+            cout << "2. Hapus Data\n";
+            cout << "3. Lihat semua data Ascending\n";
+            cout << "4. Lihat semnua data Descending\n";
+            cout << "5. Cari Data\n";
+            cout << "6. Keluar\n";
+            cout << "\nMasukkan Pilihan : ";
+            int pil;
+            cin >> pil;
+
+            switch (pil){
+                case 1 : addnode();
+                    break;
+                case 2 : deletenode();
+                    break;
+                case 3 : traverse();
+                    break;
+                case 4 : revtraverse();
+                    break;
+                case 5 : searchdata();
+                    break;
+                case 6 : 
+                    return 0;
+                default : 
+                    cout << "\nInvalid option\n";
+                    break;
+            }
+        }
+        catch(exception & e)
+        {
+            cout << "Periksa kembali pilihan yang dimasukkan\n";
+        }
+        
+    }
     
 }
 
