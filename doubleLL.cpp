@@ -117,5 +117,18 @@ bool listempty(){
 }
 
 void traverse (){
-    
+    if (listempty())
+    {
+        cout << "List Kosong " << endl;
+    }
+    else{
+        cout << "\nRecords in ascending order of roll number are : " << endl;
+        node *current = START;
+        while (current != NULL){
+            cout << current->noMhs << " " << current->name << endl;
+            current = current->next;
+        }
+    }  
 }
+
+
