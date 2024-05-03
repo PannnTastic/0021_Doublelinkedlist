@@ -10,3 +10,5 @@ struct  node
 };
 
 node* START = NULL;
+
+void addnode(){
