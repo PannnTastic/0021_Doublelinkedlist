@@ -150,4 +150,8 @@ void revtraverse (){
     }
 }
 
+void searchdata(){
+    
+}
+
 
