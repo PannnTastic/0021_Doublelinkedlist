@@ -113,5 +113,5 @@ void deletenode(){
 }
 
 bool listempty(){
-    
+    return (START == NULL);
 }
