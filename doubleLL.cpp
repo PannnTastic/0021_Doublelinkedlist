@@ -151,7 +151,24 @@ void revtraverse (){
 }
 
 void searchdata(){
-    
+    if (listempty() == true){
+        cout << "\nList kosong\n";
+    }
+    node *prev, *curr;
+    prev = curr = NULL;
+    cout << "\nMasukkan Nim yang ingin dicari : ";
+    int num;
+    cin >> num;
+    if (search(num, &prev, &curr)== false){
+        cout << "Nim tidak ditemukan\n";
+    }
+    else{
+        cout << "\nNim ditemukan\n";
+        cout << "\nNIM : "<< curr->noMhs <<endl;
+        cout << "\nNama : " << curr->name << endl;
+    }
 }
+
+
 
 
