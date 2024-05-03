@@ -109,8 +109,9 @@ void deletenode(){
     }
 
     delete current;
-    cout << "\x1b[32mNim yang anda Masukkan " << rollno << " telah dihapus\x1b[0m" << endl;
-    
-    
+    cout << "\x1b[32mNim yang anda Masukkan " << rollno << " telah dihapus\x1b[0m" << endl;   
+}
+
+bool listempty(){
     
 }
