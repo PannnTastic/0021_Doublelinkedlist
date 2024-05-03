@@ -66,5 +66,51 @@ bool search (int rollno, node **previous, node **current){
 }
 
 void deletenode(){
+    node *previous, *current;
+    int rollno;
+
+    cout << "\nMasukkan Nim yang ingin di hapus : ";
+    cin >> rollno;
+
+    if (START == NULL){
+        cout << "List Kosong" << endl;
+        return;
+    }
+
+    current = START;
+    previous = NULL;
+
+    while (current != NULL && current->noMhs != rollno)
+    {
+        previous = current;
+        current = current->next;
+    }
+
+    if (current == NULL)
+    {
+        cout << "\033[31mNim yang anda cari " << rollno << " tidak ditemukan\033[0m" << endl;
+        return;
+    }
+
+    if (current == START)
+    {
+        START = START->next;
+        if (START != NULL)
+        {
+            START->prev = NULL;
+        }
+    }
+    else{
+        previous->next = current->next;
+        if (current->next != NULL)
+        {
+            current->next->prev = previous;
+        } 
+    }
+
+    delete current;
+    cout << "\x1b[32mNim yang anda Masukkan " << rollno << " telah dihapus\x1b[0m" << endl;
+    
+    
     
 }
