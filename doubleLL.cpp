@@ -53,3 +53,7 @@ void addnode(){
         }
     }
 }
+
+bool search (){
+    
+}
