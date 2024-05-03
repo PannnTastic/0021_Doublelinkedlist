@@ -12,3 +12,8 @@ struct  node
 node* START = NULL;
 
 void addnode(){
+    node* nodebaru = new node();
+    cout << "Masukkan NIM : ";
+    cin >> nodebaru->noMhs;
+    cout << "Masukkan Nama : ";
+    cin >> nodebaru->name;
